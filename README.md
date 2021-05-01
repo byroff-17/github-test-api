@@ -13,7 +13,7 @@ GitHub REST API with AngularJS front end
 * Go to your web browser http://localhost:8080/#!/ . It's ready to use!.
 
 ## Authorization use
-GitHub API requires using a Token to get access (limited - 15,000 request per hour aprox), so is needed to use a Personal Token (https://github.com/settings/tokens), for test purposes it can be stored on local file "/scripts/app.js" with the global var "myToken".
+GitHub API requires using a Token to get access (limited - 15,000 request per hour aprox), so is needed to use a Personal Token (https://github.com/settings/tokens), for test purposes it can be stored on local file "/scripts/app.js" with the global var "myToken" (Will be mailed by developer).
 
 WARNING: This token can't be shared, is not provided and is only used for test purposes. In production environment must be stored safe, like environment variables.
 If needed contact developer.
