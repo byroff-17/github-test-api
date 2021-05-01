@@ -18,3 +18,28 @@ body {
 footer {
     display: block;
 }
+
+.file-additions {
+    color: #2c6803
+}
+
+.file-deletions {
+    color: #d6390a
+}
+
+.file-changes {
+    color: #090cb4
+}
+
+.div-center {
+    margin: auto;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.msc-confirm {
+    z-index: 999999999;
+}
