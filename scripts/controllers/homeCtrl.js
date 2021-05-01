@@ -22,6 +22,7 @@ angular
                 if (result) {
                     $("#modalDetails").modal("show");
                     $scope.commitDetails = result;
+                    console.log(result);
                 }
             });
         };

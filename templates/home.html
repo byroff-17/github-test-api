@@ -23,7 +23,7 @@
     <br>
     <div>
         <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-start" ng-repeat="commit in commits">
+            <li class="list-group-item d-flex justify-content-between align-items-start shadow p-3 mb-4 bg-body rounded" ng-repeat="commit in commits">
                 <div>
                     <strong>{{commit.commit.committer.name}}</strong>
                     <small>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="btn-group" role="group" aria-label="Commit Info Buttons">
                     <button type="button" class="btn btn-info" ng-click="selectCommit(commit)">More</button>
-                    <a type="button" ng-href="{{commit.html_url}}" class="btn btn-secondary">GH View</a>
+                    <a type="button" ng-href="{{commit.html_url}}" class="btn btn-secondary" target="_blank">GH View</a>
                 </div>
             </li>
         </ul>
@@ -42,21 +42,23 @@
 </div>
 
 <div id="modalDetails" class="modal" data-easein="bounceDownIn" tabindex="-1" role="dialog" aria-labelledby="costumModalLabel" aria-hidden="true" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modal-small">
+    <div class="modal-dialog mw-100 w-50" role="document">
+        <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">{{commit.commit.message}}
-                    <small>
-                        {{commit.commit.committer.date | date:'EEE dd MMM yyyy HH:mm:ss'}}
-                    </small>
-                </h4>
+                <h4 class="modal-title">{{commit.commit.message}}</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="file in commitDetails.files">
+            <div class="modal-body col-md-12">
+                <div class="alert alert-info text-center" role="alert">
+                    {{commitDetails.files.length}} files updated! GitHub commit info <a ng-href="{{commit.html_url}}" class="alert-link" target="_blank">here</a>.
+                    <small class="text-muted">
+                        {{commit.commit.committer.date | date:'yyyy/MM/dd HH:mm:ss'}}
+                    </small>
+                </div>
+                <div class="row col-md-12">
+                    <div class="card col-md-6" ng-repeat="file in commitDetails.files">
                         <strong>{{file.filename}}</strong>
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar" ng-style="{width : (((file.additions/file.changes)*100) + '%' ) }" aria-valuenow="{{((file.additions/file.changes)*100)}}" aria-valuemin="0" aria-valuemax="100"></div>
@@ -67,8 +69,9 @@
                             <small class="file-deletions">{{file.deletions}} Deletions</small> -
                             <small class="file-changes">{{file.changes}} Changes</small>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <div class="form-group">

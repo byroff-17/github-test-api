@@ -52,6 +52,8 @@ footer {
     border: transparent;
 }
 
+.modal-small {}
+
 .msc-confirm {
     z-index: 999999999;
 }
