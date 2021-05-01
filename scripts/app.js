@@ -1,5 +1,7 @@
 'use strict';
 
+var myToken = "XXX";
+
 angular
     .module('github-test-api', [
         'ui.router', 'ngRoute', 'ui.bootstrap', 'yaru22.angular-timeago'

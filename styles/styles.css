@@ -40,6 +40,18 @@ footer {
     text-align: center;
 }
 
+.avatar-author {
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+}
+
+.card-author {
+    width: 50%;
+    background-color: transparent;
+    border: transparent;
+}
+
 .msc-confirm {
     z-index: 999999999;
 }
