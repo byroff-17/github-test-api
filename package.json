@@ -1,0 +1,25 @@
+{
+  "name": "github-test-api",
+  "namelower": "github-test-api",
+  "version": "1.0.0",
+  "description": "GitHub Test API",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:byroff-17/github-test-api.git"
+  },
+  "dependencies": {
+    "@uirouter/visualizer": "latest",
+    "angular": "^1.8.2",
+    "angular-bootstrap": "latest",
+    "angular-route": "latest",
+    "angular-ui-bootstrap": "latest",
+    "angular-ui-router": "latest",
+    "bootstrap": "latest",
+    "http-server": "latest",
+    "jasny-bootstrap": "latest",
+    "jquery": "^3.6.0",
+    "medium-style-confirm": "latest",
+    "sass-bootstrap": "latest"
+  },
+  "author": "Byron Monroy <bsmonroy17@gmail.com"
+}
