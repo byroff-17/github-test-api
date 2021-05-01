@@ -5,12 +5,15 @@ angular
         $scope.author = "byroff-17";
         $scope.repo = "github-test-api";
         $scope.myToken = myToken;
+        $scope.loading = false;
 
         $scope.getCommitList = function() {
+            $scope.loading = true;
             var path = "https://api.github.com/repos/" + $scope.author + "/" + $scope.repo + "/commits";
             apiService.get(path, $scope.myToken).then(function(result) {
                 if (result) {
                     $scope.commits = result;
+                    $scope.loading = false;
                 }
             });
         };
@@ -22,7 +25,6 @@ angular
                 if (result) {
                     $("#modalDetails").modal("show");
                     $scope.commitDetails = result;
-                    console.log(result);
                 }
             });
         };
@@ -31,7 +33,6 @@ angular
             var path = "https://api.github.com/users/" + $scope.author;
             apiService.get(path, $scope.myToken).then(function(result) {
                 if (result) {
-                    console.log(result);
                     $scope.authorData = result;
                 }
             });

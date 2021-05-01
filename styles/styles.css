@@ -46,13 +46,17 @@ footer {
     height: auto;
 }
 
+.avatar-commiter {
+    border-radius: 50%;
+    width: 3%;
+    height: auto;
+}
+
 .card-author {
     width: 50%;
     background-color: transparent;
     border: transparent;
 }
-
-.modal-small {}
 
 .msc-confirm {
     z-index: 999999999;
