@@ -10,6 +10,7 @@ GitHub REST API with AngularJS front end
 * From command line, go to root path of project.
 * Install all dependencies needed to deploy the app with command "npm install".
 * Once it's done, use de command "http-server" to start the local server on port 8080.
+* Go to your web browser http://localhost:8080/#!/ . It's ready to use!.
 
 ## Authorization use
 GitHub API requires using a Token to get access (limited - 15,000 request per hour aprox), so is needed to use a Personal Token (https://github.com/settings/tokens), for test purpouses it can be stored on local file "/scripts/app.js" with the global var "myToken".
