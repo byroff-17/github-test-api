@@ -17,3 +17,5 @@ GitHub API requires using a Token to get access (limited - 15,000 request per ho
 
 WARNING: This token can't be shared, is not provided and is only used for test purposes. In production environment must be stored safe, like environment variables.
 If needed contact developer.
+
+UPDATE: Current personal token expired, contact developer to provide a new token.
